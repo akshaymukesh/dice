@@ -3,7 +3,16 @@ import UIKit
 
 enum PlayerTurn {
     case playerOne, playerTwo
+    mutating func changePlayer() {
+        switch self {
+        case .playerOne:
+            self = .playerTwo
+        case .playerTwo:
+            self = .playerOne
+        }
+    }
 }
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var playerInfoLabel: UILabel!
@@ -33,12 +42,14 @@ class ViewController: UIViewController {
             boardPosition?.addSubview(playerOne.playerView)
             playerOneScoreLabel.text = "\(playerOne.playerPosition)"
             playerInfoLabel.text = playerOne.playerInfo
+            player.changePlayer()
         } else {
             playerTwo.playerPosition += diceValue
             let boardPosition = view.viewWithTag(playerTwo.playerPosition)
             boardPosition?.addSubview(playerTwo.playerView)
             playerTwoScoreLabel.text = "\(playerTwo.playerPosition)"
             playerInfoLabel.text = playerTwo.playerInfo
+            player.changePlayer()
         }
     }
 }

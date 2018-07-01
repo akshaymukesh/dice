@@ -1,6 +1,9 @@
 
 import UIKit
 
+enum Dice: Int {
+    case one = 1, two, three, four, five, six, none = 0
+}
 enum PlayerTurn {
     case playerOne, playerTwo
     mutating func changePlayer() {
@@ -24,6 +27,7 @@ class ViewController: UIViewController {
     var player: PlayerTurn = .playerOne
     let playerOne: Player = Player(playerInfo: "Player one's turn", playerColor: #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1))
     let playerTwo: Player = Player(playerInfo: "Player two's turn", playerColor: #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1))
+    var dice: Dice = .none
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,8 @@ class ViewController: UIViewController {
     }
     @IBAction func dicePressed(_ sender: UIButton) {
         let diceValue = rollDice()
+        dice = Dice.init(rawValue: diceValue) ?? .none
+        changeDiceImage()
         if player == .playerOne {
             playerOne.playerPosition += diceValue
             let boardPosition = view.viewWithTag(playerOne.playerPosition)
@@ -70,6 +76,18 @@ extension ViewController {
     
     func rollDice() -> Int {
         return Int(arc4random() % 6) + 1
+    }
+    func changeDiceImage() {
+        switch dice {
+        case .one: diceButtonImage.image = UIImage(named: "dice_side_1.png")
+        case .two: diceButtonImage.image = UIImage(named: "dice_side_2.png")
+        case .three: diceButtonImage.image = UIImage(named: "dice_side_3.png")
+        case .four: diceButtonImage.image = UIImage(named: "dice_side_4.png")
+        case .five: diceButtonImage.image = UIImage(named: "dice_side_5.png")
+        case .six: diceButtonImage.image = UIImage(named: "dice_side_6.png")
+        default:
+            break
+        }
     }
 }
 

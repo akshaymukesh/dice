@@ -476,7 +476,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.25729303707119267" green="0.57128412428673636" blue="1" alpha="0.34837863869863012" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.65098039215686276" green="0.68235294117647061" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.93296331170000002" green="0.49165862799999999" blue="0.28860419990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>

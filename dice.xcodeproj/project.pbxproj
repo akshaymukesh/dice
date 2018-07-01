@@ -22,6 +22,7 @@
 		3513150920E8D6B500D08983 /* dice_side_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3513150320E8D6B200D08983 /* dice_side_2.png */; };
 		3513150A20E8D6B500D08983 /* dice_side_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3513150420E8D6B300D08983 /* dice_side_5.png */; };
 		3513150B20E8D6B500D08983 /* dice_side_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3513150520E8D6B400D08983 /* dice_side_4.png */; };
+		3513150E20E9173000D08983 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3513150D20E9173000D08983 /* startButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3513150320E8D6B200D08983 /* dice_side_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice_side_2.png; sourceTree = "<group>"; };
 		3513150420E8D6B300D08983 /* dice_side_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice_side_5.png; sourceTree = "<group>"; };
 		3513150520E8D6B400D08983 /* dice_side_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice_side_4.png; sourceTree = "<group>"; };
+		3513150D20E9173000D08983 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		3513150C20E8D6C700D08983 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3513150D20E9173000D08983 /* startButton.png */,
 				351314FC20E8016A00D08983 /* black dice.gif */,
 				351314FD20E8016A00D08983 /* dice background 3.jpg */,
 				3513150020E8D6B000D08983 /* dice_side_1.png */,
@@ -269,6 +272,7 @@
 				351314D920E7E77F00D08983 /* LaunchScreen.storyboard in Resources */,
 				351314D620E7E77F00D08983 /* Assets.xcassets in Resources */,
 				351314FF20E8016B00D08983 /* dice background 3.jpg in Resources */,
+				3513150E20E9173000D08983 /* startButton.png in Resources */,
 				3513150B20E8D6B500D08983 /* dice_side_4.png in Resources */,
 				3513150720E8D6B500D08983 /* dice_side_3.png in Resources */,
 				351314D420E7E77E00D08983 /* Main.storyboard in Resources */,
@@ -473,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDTJ3UHQK5;
 				INFOPLIST_FILE = dice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NDTJ3UHQK5;
 				INFOPLIST_FILE = dice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

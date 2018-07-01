@@ -14,6 +14,8 @@
 		351314D920E7E77F00D08983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351314D720E7E77F00D08983 /* LaunchScreen.storyboard */; };
 		351314E420E7E78000D08983 /* diceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351314E320E7E78000D08983 /* diceTests.swift */; };
 		351314EF20E7E78000D08983 /* diceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351314EE20E7E78000D08983 /* diceUITests.swift */; };
+		351314FE20E8016B00D08983 /* black dice.gif in Resources */ = {isa = PBXBuildFile; fileRef = 351314FC20E8016A00D08983 /* black dice.gif */; };
+		351314FF20E8016B00D08983 /* dice background 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 351314FD20E8016A00D08983 /* dice background 3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		351314EA20E7E78000D08983 /* diceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = diceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		351314EE20E7E78000D08983 /* diceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diceUITests.swift; sourceTree = "<group>"; };
 		351314F020E7E78000D08983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		351314FC20E8016A00D08983 /* black dice.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "black dice.gif"; sourceTree = "<group>"; };
+		351314FD20E8016A00D08983 /* dice background 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dice background 3.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		351314CD20E7E77E00D08983 /* dice */ = {
 			isa = PBXGroup;
 			children = (
+				351314FC20E8016A00D08983 /* black dice.gif */,
+				351314FD20E8016A00D08983 /* dice background 3.jpg */,
 				351314CE20E7E77E00D08983 /* AppDelegate.swift */,
 				351314D020E7E77E00D08983 /* ViewController.swift */,
 				351314D220E7E77E00D08983 /* Main.storyboard */,
@@ -229,8 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				351314FE20E8016B00D08983 /* black dice.gif in Resources */,
 				351314D920E7E77F00D08983 /* LaunchScreen.storyboard in Resources */,
 				351314D620E7E77F00D08983 /* Assets.xcassets in Resources */,
+				351314FF20E8016B00D08983 /* dice background 3.jpg in Resources */,
 				351314D420E7E77E00D08983 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

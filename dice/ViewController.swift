@@ -44,10 +44,7 @@ class ViewController: UIViewController {
         showStartAlert()
         gameStarted()
     }
-    
-    // ladder cells: 4-20, 12-26, 29-48, 41-65, 52-73, 57-82, 70-85, 90-100, 92-95
-    // snake cells: 98-23, 94-67, 88-46, 86-53, 81-44, 79-61, 77-55, 76-13, 60-15, 54-1, 51-30, 39-5, 21-17
-    
+
     @IBAction func dicePressed(_ sender: UIButton) {
         let diceValue = rollDice()
         dice = Dice.init(rawValue: diceValue) ?? .none
@@ -104,9 +101,34 @@ extension ViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func winningAlertAndReset(isPlayerOne: Bool) {
+        var player = ""
+        if isPlayerOne {
+            player = "Player one"
+        } else {
+            player = "Player two"
+        }
+        let alert = UIAlertController(title: "Victory", message: "\(player) has won the game", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "New Game", style: .default, handler: { _ in
+            // reset the game in here
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    func overflowAlert() {
+        let alert = UIAlertController(title: "Oops!", message: "Cannot go beyond 100\nPlay next turn", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     // this function is to configure the player one values
     fileprivate func configurePlayerOne(_ diceValue: Int) {
-        playerOne.playerPosition += diceValue
+        if playerOne.playerPosition == 100 {
+            winningAlertAndReset(isPlayerOne: true)
+        } else if playerOne.playerPosition > 100 {
+            overflowAlert()
+        } else {
+            playerOne.playerPosition += diceValue
+        }
         for ladderCell in ladderCells {
             if ladderCell.from == playerOne.playerPosition {
                 // provide alert function
@@ -130,7 +152,13 @@ extension ViewController {
     
     // this function of to configure the player two values
     fileprivate func configurePlayerTwo(_ diceValue: Int) {
-        playerTwo.playerPosition += diceValue
+        if playerTwo.playerPosition == 100 {
+            winningAlertAndReset(isPlayerOne: false)
+        } else if playerTwo.playerPosition > 100 {
+            overflowAlert()
+        } else {
+            playerTwo.playerPosition += diceValue
+        }
         for ladderCell in ladderCells {
             if ladderCell.from == playerTwo.playerPosition {
                 // provide alert function
